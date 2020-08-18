@@ -116,7 +116,8 @@ class ParseCsv(object):
                 repl_dictionary[root_id] = {
                     'label': root_label,
                     'id': root_id,
-                    'url': root_url,
+                    'link': root_url,
+		            'children': [],
                 }
 
             temp = hierarchy_dictionary[root_id]
@@ -136,7 +137,8 @@ class ParseCsv(object):
                         repl_dictionary[id] = {
                             'label': label,
                             'id': id,
-                            'url': url,
+                            'link': url,
+                            'children': [],
                         }
 
 
