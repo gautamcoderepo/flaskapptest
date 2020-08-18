@@ -1,5 +1,0 @@
-2020-08-18 19:16:02,461 - parse_csv - INFO - ID:3cf7be63b979491993cace91e20e10a3 FILENAME:data2.csv Process Started
-2020-08-18 19:16:02,462 - parse_csv - INFO - ID:3cf7be63b979491993cace91e20e10a3 FILENAME:data2.csv File Data Extracted Successfully
-2020-08-18 19:16:02,462 - parse_csv - INFO - ID:3cf7be63b979491993cace91e20e10a3 FILENAME:data2.csv Data Cleaned Successfully
-2020-08-18 19:16:02,465 - parse_csv - INFO - ID:3cf7be63b979491993cace91e20e10a3 FILENAME:data2.csv Hierarchies Created Successfully
-2020-08-18 19:16:02,466 - parse_csv - INFO - ID:3cf7be63b979491993cace91e20e10a3 FILENAME:data2.csv Process Completed
