@@ -77,8 +77,6 @@ class ParseCsv(object):
             # Do not need the base url column
             new_record = record[1:]
 
-            print('New Record', new_record)
-
             if any(new_record):
                 nodeslist = [new_record[pos:pos + 3] for pos in range(0, len(new_record), 3)]
                 filtered_list_of_records.append(nodeslist)
@@ -156,16 +154,10 @@ class ParseCsv(object):
         if status:
             logger.info(f"ID:{self.processing_id} FILENAME:{self.filename} File Data Extracted Successfully")
             filtered_data = self.remove_irrelevant_records(data)
-            print(filtered_data)
+            # print(filtered_data)
             logger.info(f"ID:{self.processing_id} FILENAME:{self.filename} Data Cleaned Successfully")
             final_list = self.create_final_list(filtered_data)
-            print(final_list)
+            # print(final_list)
             logger.info(f"ID:{self.processing_id} FILENAME:{self.filename} Hierarchies Created Successfully")
             self.create_json(final_list)
             logger.info(f"ID:{self.processing_id} FILENAME:{self.filename} Process Completed")
-
-
-
-
-
-

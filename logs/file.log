@@ -1,0 +1,3 @@
+2020-08-18 20:07:58,505 - parse_csv - INFO - ID:d82b39aee5504baba07b22a16c2093ea FILENAME:dummy-data.csv Process Started
+2020-08-18 20:07:58,506 - parse_csv - INFO - ID:d82b39aee5504baba07b22a16c2093ea FILENAME:dummy-data.csv File Data Extracted Successfully
+2020-08-18 20:07:58,507 - parse_csv - INFO - ID:d82b39aee5504baba07b22a16c2093ea FILENAME:dummy-data.csv Data Cleaned Successfully

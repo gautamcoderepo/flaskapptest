@@ -1,5 +1,5 @@
-config ={
-    'input_folder_path':'files/input',
-    'output_folder_path':'files/output',
-    'log_folder_path':'files/logs'
+config = {
+    'input_folder_path': 'client-files',
+    'output_folder_path': 'processed-files',
+    'log_folder_path': 'logs'
 }
