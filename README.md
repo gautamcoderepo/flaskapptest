@@ -7,3 +7,8 @@ Program Execution instructions:
 5. Application is accessible at <instance_ip>:5000  
 
 
+Flask Endpoints:
+'/' - Homepage where you upload the csv
+if csv is invalid it will internally render page 404.html
+if csv is valid you will be able to download the json
+
