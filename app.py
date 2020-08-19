@@ -15,7 +15,6 @@ app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 * 10
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['DOWNLOAD_FOLDER'] = DOWNLOAD_FOLDER
-app.secret_key = os.environ['flaskapptest']
 
 
 def allowed_file(filename):
@@ -54,10 +53,12 @@ def upload_file():
         p1 = ParseCsv(filename=filename, headers=True)
 
         try:
-            p1.process()
+            if p1.validate_csv():
+                p1.process()
+            else:
+                return render_template('404.html')
         except Exception as e:
-            print(str(e))
-            flash('File does not have a valid format')
+            return render_template('404.html')
 
         return redirect(url_for('uploaded_file', filename=filename))
 

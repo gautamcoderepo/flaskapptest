@@ -4,6 +4,7 @@ import uuid
 import os
 from config import config
 import logging
+import re
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -64,6 +65,24 @@ class ParseCsv(object):
         except Exception as e:
             logger.error(f"ID:{self.processing_id} FILENAME:{self.filename} MESSAGE:{str(e)}")
 
+    def validate_csv(self):
+        status = False
+        csv_path = os.path.join(config['input_folder_path'], self.filename)
+
+        with open(csv_path, 'r') as csvfile:
+            reader = csv.DictReader(csvfile)
+            fields = reader.fieldnames
+
+
+            hierarchyfields = [field for field in fields if re.search('Level', field)]
+
+            print(fields)
+            print(hierarchyfields)
+
+            if (len(fields) - len(hierarchyfields) == 1) and (len(hierarchyfields) % 3 == 0):
+                status = True
+
+        return status
 
 
     def remove_irrelevant_records(self, list_of_records):
